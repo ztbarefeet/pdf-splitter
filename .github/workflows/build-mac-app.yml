@@ -29,7 +29,7 @@ jobs:
           pyinstaller -w -F --name "PDF拆分工具" pdf_splitter.py  # 打包为单个Mac应用
 
       - name: 上传打包结果
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4  # 升级为最新v4版本（解决弃用问题）
         with:
           name: mac-pdf-splitter  # 工件名称（下载时显示）
           path: dist/PDF拆分工具.app  # 打包输出的.app文件路径
